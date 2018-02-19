@@ -120,6 +120,7 @@ class _DictWrapper(object):
 
         hypos: sequence of hypotheses
         """
+        print(self)
         self.name = name
         self.d = {}
 
@@ -526,7 +527,7 @@ class Pmf(_DictWrapper):
             float mean
         """
         mu = 0.0
-        for x, p in self.d.iteritems():
+        for x, p in self.d.items():
             mu += p * x
         return mu
 
